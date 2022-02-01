@@ -23,13 +23,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//   db.select("*")
-//     .from("users")
-//     .then((data) => {
-//       res.send(data);
-//     });
-// });
+app.get("/", (req, res) => {
+  res.send("it's working");
+});
 
 app.post("/signin", signin.handleSignin(db, bcrypt)); // functioneaza la fel ca si celelalte functii de mai jos
 
